@@ -101,7 +101,7 @@ int intersectPoint(Node* head1, Node* head2)
             for(int i=0;i<n1-n2;i++) // then we traverse list 1 until remaining length of both are same
                 a=a->next;
             Node *b=head2;
-            while(a->next && b->next) // now we traverse both lists simultaneously
+            while(a && b) // now we traverse both lists simultaneously
                 {
                     if(a==b) // if we find a common node or intersection point
                         return a->data; // we return the data associated with that node
@@ -115,7 +115,7 @@ int intersectPoint(Node* head1, Node* head2)
             for(int i=0;i<n2-n1;i++)
                 a=a->next;
             Node *b=head1;
-            while(a->next && b->next)
+            while(a && b)
                 {
                     if(a==b)
                         return a->data;
@@ -127,7 +127,7 @@ int intersectPoint(Node* head1, Node* head2)
         { // the lists simultaneously
             a=head1;
             Node *b=head2;
-            while(a->next && b->next)
+            while(a && b)
                 {
                     if(a==b)
                         return a->data;
